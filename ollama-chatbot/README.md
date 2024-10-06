@@ -97,6 +97,12 @@ bcr@Surface:~$
 
 Open the Web UI at http://localhost:8080
 
+![image](https://github.com/user-attachments/assets/1aa44484-8327-4947-bf90-0e77d4dd56b7)
+
+"Sign up" with any email ID ( does NOT have to be a valid one )
+
+![image](https://github.com/user-attachments/assets/4c8cf066-8535-4c01-b964-2e0a1b5632c7)
+
 
 
 ## Option 2: On Denvr AI Cloud
