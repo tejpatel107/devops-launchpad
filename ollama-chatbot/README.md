@@ -122,6 +122,11 @@ Enter the IP of the Ollama Docker container
                     "IPAddress": "172.17.0.3",
 ```
 
+### Now you are all set with your Personal Chatbot of your Laptop
+
+![image](https://github.com/user-attachments/assets/b1dd25c4-2f1f-48f2-9ab7-bb10b2e05e58)
+
+
 ## Option 2: On Denvr AI Cloud
 
 ### Step 1: Denvr Cloud Account
