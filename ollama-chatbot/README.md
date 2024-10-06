@@ -10,7 +10,7 @@ This repository contains a simple chatbot application built using OpenWebUI and 
 - **Environment Configuration**: Easily configure the Ollama backend server IP using an environment variable.
 
 
-## Option 1: On your local Laptop
+## Option 1: On your local Laptop ( Windows - WSL )
 
 ### Step 1: Ensure Docker Destop is installed and Running
 
@@ -25,7 +25,7 @@ bcr@Surface:~$
 ### Step 2: Download Ollama Image 
 
 ```
-sudo docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+sudo docker run --network=bridge -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 ```
 
 Output
@@ -57,13 +57,13 @@ sudo docker exec -it ollama ollama run llama3.2:1b
 ### Step 4: Run Open Web UI
 
 ```
-sudo docker run -d -p 8080:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+sudo docker run --network=bridge -d -p 8080:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
 Output
 
 ```
-sudo docker run -d -p 8080:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+sudo docker run --network=bridge -d -p 8080:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 Unable to find image 'ghcr.io/open-webui/open-webui:main' locally
 main: Pulling from open-webui/open-webui
 a2318d6c47ec: Pull complete
@@ -88,11 +88,10 @@ ac0f5a1751025a23cc60140602337b88a19d43f6dc8885525dcd3d69dc45b202
 
 Check all Running containers
 ```
-bcr@Surface:~$ sudo docker ps
-CONTAINER ID   IMAGE                                COMMAND               CREATED         STATUS                            PORTS                      NAMES
-ac0f5a175102   ghcr.io/open-webui/open-webui:main   "bash start.sh"       7 seconds ago   Up 5 seconds (health: starting)   0.0.0.0:8080->8080/tcp     open-webui
-4ee4d125eeca   ollama/ollama                        "/bin/ollama serve"   5 minutes ago   Up 5 minutes                      0.0.0.0:11434->11434/tcp   ollama
-bcr@Surface:~$
+sudo docker ps
+CONTAINER ID   IMAGE                                COMMAND               CREATED         STATUS                   PORTS                      NAMES
+4d5971c450cf   ollama/ollama                        "/bin/ollama serve"   5 minutes ago   Up 5 minutes             0.0.0.0:11434->11434/tcp   ollama
+238432e6d2dd   ghcr.io/open-webui/open-webui:main   "bash start.sh"       6 minutes ago   Up 6 minutes (healthy)   0.0.0.0:8080->8080/tcp     open-webui
 ```
 
 Open the Web UI at http://localhost:8080
@@ -103,7 +102,25 @@ Open the Web UI at http://localhost:8080
 
 ![image](https://github.com/user-attachments/assets/4c8cf066-8535-4c01-b964-2e0a1b5632c7)
 
+If you are unable to see Ollama backend "Select a model"
 
+![image](https://github.com/user-attachments/assets/32d2cf3d-0206-4037-a689-1dfbae5fb86c)
+
+Then goto "Setting" -> Admin Setting -> Connection
+
+![image](https://github.com/user-attachments/assets/eb05a998-a89a-4351-8587-83b8b307b0a9)
+
+Then goto "Setting" -> Admin Setting -> Connection
+![image](https://github.com/user-attachments/assets/0e54b11f-874e-45a9-8de8-9dabd9bdb9ae)
+
+Enter the IP of the Ollama Docker container
+
+```
+ sudo docker inspect ollama | grep IPAddress
+            "SecondaryIPAddresses": null,
+            "IPAddress": "172.17.0.3",
+                    "IPAddress": "172.17.0.3",
+```
 
 ## Option 2: On Denvr AI Cloud
 
