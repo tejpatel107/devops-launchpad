@@ -52,11 +52,7 @@ e276c51f880190c6fbfebe882acb13be06a77abbcabbf25cc19fd339621cd896
 ```
 sudo docker exec -it ollama ollama run llama3.2:1b
 ```
-Output
 
-```
-
-```
 
 ### Step 4: Run Open Web UI
 
@@ -91,7 +87,7 @@ ac0f5a1751025a23cc60140602337b88a19d43f6dc8885525dcd3d69dc45b202
 ```
 
 Check all Running containers
-
+```
 bcr@Surface:~$ sudo docker ps
 CONTAINER ID   IMAGE                                COMMAND               CREATED         STATUS                            PORTS                      NAMES
 ac0f5a175102   ghcr.io/open-webui/open-webui:main   "bash start.sh"       7 seconds ago   Up 5 seconds (health: starting)   0.0.0.0:8080->8080/tcp     open-webui
