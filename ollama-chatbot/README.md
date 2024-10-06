@@ -117,6 +117,12 @@ Enter the IP of the Ollama Docker container
 
 ```
  sudo docker inspect ollama | grep IPAddress
+```
+
+Output
+
+```
+ sudo docker inspect ollama | grep IPAddress
             "SecondaryIPAddresses": null,
             "IPAddress": "172.17.0.3",
                     "IPAddress": "172.17.0.3",
