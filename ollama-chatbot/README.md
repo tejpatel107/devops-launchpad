@@ -1,5 +1,5 @@
 
-# Simple Streamlit Chatbot with Ollama
+# Chatbot with Ollama
 
 This repository contains a simple chatbot application built using OpenWebUI and an [Ollama](https://ollama.ai/) model backend for generating responses. The application takes user inputs via a text box and sends them to the Ollama backend to generate responses using a specified model.
 
