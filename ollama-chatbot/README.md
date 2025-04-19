@@ -161,7 +161,7 @@ CONTAINER ID   IMAGE                                COMMAND               CREATE
 
 Open the Web UI at http://localhost:3000
 
-![image](https://github.com/user-attachments/assets/1aa44484-8327-4947-bf90-0e77d4dd56b7)
+![image](https://github.com/user-attachments/assets/d762338d-4a95-4d89-85de-799050debe7f)
 
 
 ### To add Additional Model connections 
