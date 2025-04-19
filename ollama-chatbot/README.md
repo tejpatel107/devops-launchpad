@@ -93,6 +93,29 @@ docker exec -it ollama ollama ps
 NAME               ID              SIZE      PROCESSOR    UNTIL
 llama3.2:latest    a80c4f17acd5    4.0 GB    100% GPU     4 minutes from now
 ```
+```
+docker exec -it ollama nvidia-smi
+Sat Apr 19 21:03:59 2025
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.183.04             Driver Version: 538.78       CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA RTX A2000 8GB Lap...    On  | 00000000:01:00.0  On |                  N/A |
+| N/A   43C    P8               7W /  80W |   4172MiB /  8192MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|    0   N/A  N/A       209      C   /ollama                                   N/A      |
++---------------------------------------------------------------------------------------+
+```
 
 ### Step 3.2: Find the Bridge (internal IP) of the Ollama container
 
