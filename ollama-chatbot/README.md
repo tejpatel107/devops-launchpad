@@ -133,43 +133,6 @@ Output
 ![image](https://github.com/user-attachments/assets/b1dd25c4-2f1f-48f2-9ab7-bb10b2e05e58)
 
 
-## Option 2: On Denvr AI Cloud
-
-### Step 1: Denvr Cloud Account
-
-Setup your account to launch your GPU of choice ( A100-40G, A100-80G, H100, Gaudi2 )
-
-https://console.cloud.denvrdata.com/account/login
-
-### Step 2: Launch the VM
-
-<img width="1126" alt="image" src="https://github.com/user-attachments/assets/0b226da0-0b1c-4551-a561-9032d30b48f1">
-
-
-
-### Step 3: Install/Update packages
-
-```
-sudo apt update -y
-
-```
-
-
-### Step 4: Install Ollama and server Llama 3.2 1B model
-
-```
-sudo docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
-sudo docker exec -it ollama ollama run llama3.2
-```
-
-### Open Web UI
-
-Alternatively you can deploy Open web UI too, if you are only interested in chatbot but not Coding
-
-```
-sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
-```
-
 ## Troubleshooting
 
 - **Environment Variable Not Set**: If the application is not connecting to the Ollama backend, ensure that the `OLLAMA_IP` variable is set correctly and that the server is reachable.
