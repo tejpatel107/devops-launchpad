@@ -10,54 +10,123 @@ This repository contains a simple chatbot application built using OpenWebUI and 
 - **Environment Configuration**: Easily configure the Ollama backend server IP using an environment variable.
 
 
-## Option 1: On your local Laptop ( Windows - WSL )
+## Option 1: On your local Laptop ( Windows )
 
-### Step 1: Ensure Docker Destop is installed and Running
+### Step 1: Ensure Docker Desktop and `nvidia-smi` are installed and Running
 
 https://www.docker.com/products/docker-desktop/
 
 ```
-bcr@Surface:~$ sudo docker ps
+ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-bcr@Surface:~$
+```
+```
+>nvidia-smi.exe
+Sat Apr 19 13:35:25 2025
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 538.78                 Driver Version: 538.78       CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                     TCC/WDDM  | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA RTX A2000 8GB Lap...  WDDM  | 00000000:01:00.0  On |                  N/A |
+| N/A   44C    P5               7W /  80W |   5570MiB /  8192MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
 ```
 
-### Step 2: Download Ollama Image 
+### Step 2: Download Ollama with GPU support
 
 ```
-sudo docker run --network=bridge -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 ```
 
 Output
 
 ```
-sudo docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+PS C:\beCloudReady> docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 Unable to find image 'ollama/ollama:latest' locally
 latest: Pulling from ollama/ollama
-6414378b6477: Pull complete
-565ec4b441fe: Pull complete
-f159bfc8d800: Pull complete
-f9aa9bba7fad: Pull complete
-450c78a4a605: Pull complete
-d7e3ad6c5000: Pull complete
-9901a35ab7cb: Pull complete
-e961bfcbe854: Pull complete
-Digest: sha256:e458178cf2c114a22e1fe954dd9a92c785d1be686578a6c073a60cf259875470
+f45c5ef3e181: Pull complete
+161508c220d5: Pull complete
+d9802f032d67: Pull complete
+0d15e460e575: Pull complete
+Digest: sha256:96b7667cb536ab69bfd5cc0c2bd1e29602218e076fe6d34f402b786f17b4fde0
 Status: Downloaded newer image for ollama/ollama:latest
-e276c51f880190c6fbfebe882acb13be06a77abbcabbf25cc19fd339621cd896
+53ff742791ae2aa54b1af8fe16c09e91d730f4f8d753bf14e9a903cc6f13d991
 ```
 
 ### Step 3: Download Llama 3.2 Model
 
 ```
-sudo docker exec -it ollama ollama run llama3.2:1b
+PS C:\beCloudReady> docker exec -it ollama ollama run llama3.2
+pulling manifest
+pulling dde5aa3fc5ff... 100% ▕███████████████████████████████████████▏ 2.0 GB
+pulling 966de95ca8a6... 100% ▕███████████████████████████████████████▏ 1.4 KB
+pulling fcc5a6bec9da... 100% ▕███████████████████████████████████████▏ 7.7 KB
+pulling a70ff7e570d9... 100% ▕███████████████████████████████████████▏ 6.0 KB
+pulling 56bb8bd477a5... 100% ▕███████████████████████████████████████▏   96 B
+pulling 34bb5ab01051... 100% ▕███████████████████████████████████████▏  561 B
+verifying sha256 digest
+writing manifest
+success
+>>> Hello how are you?
+I'm just a computer program, so I don't have feelings, but thank you for asking! How can I assist
+you today? Is there something on your mind that you'd like to chat about or ask for help with?
+I'm all ears (or rather, all text).
+
+>>> Send a message (/? for help)
 ```
 
-
-### Step 4: Run Open Web UI
+### Step 3.1: Ensure Ollama is using GPU
 
 ```
-sudo docker run --network=bridge -d -p 8080:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker exec -it ollama ollama ps
+NAME               ID              SIZE      PROCESSOR    UNTIL
+llama3.2:latest    a80c4f17acd5    4.0 GB    100% GPU     4 minutes from now
+```
+
+### Step 3.2: Find the Bridge (internal IP) of the Ollama container
+
+```
+docker inspect  ollama | findstr "IP"
+```
+Expected Output
+
+```
+ docker inspect  ollama | findstr "IP"
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+                    "IPAMConfig": null,
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+```
+
+In this example the IP of Ollama container is `172.17.0.2`
+
+### Step 4: Run Open Web UI with Ollama container IP
+
+```
+
+docker run --network=bridge -d -p 8080:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
 Output
