@@ -68,22 +68,18 @@ Status: Downloaded newer image for ollama/ollama:latest
 
 ```
 PS C:\beCloudReady> docker exec -it ollama ollama run llama3.2
-pulling manifest
-pulling dde5aa3fc5ff... 100% ▕███████████████████████████████████████▏ 2.0 GB
-pulling 966de95ca8a6... 100% ▕███████████████████████████████████████▏ 1.4 KB
-pulling fcc5a6bec9da... 100% ▕███████████████████████████████████████▏ 7.7 KB
-pulling a70ff7e570d9... 100% ▕███████████████████████████████████████▏ 6.0 KB
-pulling 56bb8bd477a5... 100% ▕███████████████████████████████████████▏   96 B
-pulling 34bb5ab01051... 100% ▕███████████████████████████████████████▏  561 B
-verifying sha256 digest
-writing manifest
-success
+...
 >>> Hello how are you?
 I'm just a computer program, so I don't have feelings, but thank you for asking! How can I assist
 you today? Is there something on your mind that you'd like to chat about or ask for help with?
 I'm all ears (or rather, all text).
 
 >>> Send a message (/? for help)
+```
+If your GPU has enough RAM, try deepseek 7B 
+
+```
+docker exec -it ollama ollama run deepseek-r1:7b
 ```
 
 ### Step 3.1: Ensure Ollama is using GPU
