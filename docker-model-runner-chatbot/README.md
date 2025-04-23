@@ -104,16 +104,3 @@ Local URL: http://localhost:8501
 Network URL: http://<your-ip>:8501
 ```
 
-### Conclusion
-
-You’ve now set up **Docker Model Runner** for **LLM inferencing** on your local machine and created a **chatbot** using **Streamlit**. This setup allows you to experiment with **AI-powered applications** locally without relying on cloud infrastructure.
-
-For the full source code, check out the [GitHub repository](https://github.com/your-repo-link).
-```
-
-### Key Points:
-- This README is focused on the **commands** to set up Docker, test the LLM inferencing, and deploy a Streamlit chatbot.
-- I’ve included a **link** to the GitHub repository where users can access the full source code.
-- Replace the `https://github.com/your-repo-link` with your actual repository URL.
-
-This should be easy to follow for anyone setting up the environment and running the chatbot!
