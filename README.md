@@ -37,11 +37,14 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
   - [Yelp Review Scraper](https://github.com/becloudready/my_yelp_reviews)
   - [NLP Sentiment Analysis](https://github.com/becloudready/cloud-sentiment-analysis)
   
-### **Hardware and Networking**
+### **Linux and Networking**
 
 * Deconstructing a computer, networking fundamentals, subnetting, DNS, and DHCP
 * Introduction to Linux, Redhat Linux, commands, and file systems
 * Networking fundamentals including IPv6, VPN, and cloud networking basics
+* Repositories
+  - [Shell Scripting](https://github.com/becloudready/bash-tutorials)
+  - [Ansible Tutorial]()
 
 ### **Cloud Computing**
 
@@ -57,12 +60,17 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 * Introduction to **Docker** and **Kubernetes** for containerized applications
 * CI/CD pipeline development with Jenkins and GitHub Actions
 * Terraform projects, Ansible for automation, and setting up deployment pipelines
+* Repositories
+  - [Terraform](https://github.com/becloudready/terraform-tutorials)
+  - [Pulumi](https://github.com/becloudready/pulumi-tutorials)
+  - [Ansible](https://github.com/becloudready/ansible-tutorials)
 
 ### **AI & Large Language Models (LLM)**
 
 * Introduction to GPU architecture and its role in AI, including **Nvidia GPUs** and **Kubernetes Nvidia Operator**
 * LLMOps lifecycle management, inference optimization, and cost control
 * Deploying models like **LLaMA** on Nvidia GPUs, and understanding **LLMOps** for AI models
+* [Streamlit ChatApp Example](./streamlit-chatbot)
 
 ### **Advanced AI Platform Engineering**
 
