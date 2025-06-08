@@ -1,6 +1,6 @@
 
 
-# **Platform Engineering for AI - Course Overview**
+# **Platform Engineering for AI - Tutorial Overview**
 
 Welcome to the **Platform Engineering for AI** course! This program is designed to provide you with the essential skills needed to build, deploy, and manage AI applications using modern technologies like **Kubernetes**, **Docker**, **CI/CD pipelines**, and **GPU infrastructure**.
 
@@ -12,6 +12,7 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 * Gain hands-on experience with tools such as **Kubernetes**, **Docker**, and **CI/CD**
 * Manage **AI infrastructure** and **GPU workflows** to optimize AI model training and inference
 * Prepare for a career in the fast-evolving AI landscape
+  
 
 ---
 
@@ -26,9 +27,16 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 ### **Software Development**
 
 * Agile SDLC, Developer PC setup with Git and Visual Studio
-* Python Coding
+* Software Development with Python
 * Impact of AI on software development and the software lifecycle
-
+* Repositories
+  - [Git tutorial](https://github.com/becloudready/git-tutorials)
+  - [Python Tutorial](https://github.com/becloudready/python-tutorials)
+  - [PHP Tutorial](https://github.com/becloudready/php-tutorials)
+  - Social Media Scheduler [tldr-today](https://github.com/becloudready/tldr-today)
+  - [Yelp Review Scraper](https://github.com/becloudready/my_yelp_reviews)
+  - [NLP Sentiment Analysis](https://github.com/becloudready/cloud-sentiment-analysis)
+  
 ### **Hardware and Networking**
 
 * Deconstructing a computer, networking fundamentals, subnetting, DNS, and DHCP
@@ -40,6 +48,9 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 * Deep dive into **AWS**, **Azure**, and **GCP**
 * Introduction to cloud services, EC2, S3, Lambda, and Google AI tools
 * Setting up a virtual private cloud and Terraform for Infrastructure as Code (IaC)
+* Repositories
+  - [Quick Labs to Launch Cloud Instance](https://github.com/becloudready/quick-labs)
+
 
 ### **DevOps & Automation**
 
