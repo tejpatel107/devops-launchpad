@@ -71,6 +71,8 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 * LLMOps lifecycle management, inference optimization, and cost control
 * Deploying models like **LLaMA** on Nvidia GPUs, and understanding **LLMOps** for AI models
 * [Streamlit ChatApp Example](./streamlit-chatbot)
+* [Docker Ollama Openwebui](./docker-ollama-openwebui)
+* [Docker model Runner Chatbot](./docker-model-runner-chatbot)
 
 ### **Advanced AI Platform Engineering**
 
