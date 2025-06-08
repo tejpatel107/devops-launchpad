@@ -6,6 +6,7 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 
 ### **Course Highlights:**
 
+* Why Platform Engineering [Is DevOps is Dead?](https://youtu.be/07gEMmdw62I?si=p9obR7IqkpdMeX0z)
 * Master **DevOps** skills tailored for the AI-driven world
 * Deploy and orchestrate AI applications like **LLaMA** and **DeepSeek**
 * Gain hands-on experience with tools such as **Kubernetes**, **Docker**, and **CI/CD**
