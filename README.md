@@ -58,6 +58,8 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
   - [Terraform](https://github.com/becloudready/terraform-tutorials)
   - [Pulumi](https://github.com/becloudready/pulumi-tutorials)
   - [Ansible](https://github.com/becloudready/ansible-tutorials)
+  - [Docker](https://github.com/becloudready/docker-tutorials)
+  - [Kubernetes](https://github.com/becloudready/kubernetes-tutorials)
 
 ### **AI & Large Language Models (LLM)**
 
@@ -84,6 +86,9 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 * **AI Platform Engineering Careers**: How to adapt to AI and evolve your DevOps career with skills in **LLMOps** and **AI agents**
 * **Observability and Logging for AI Cloud**: Infrastructure monitoring, traditional vs AI GPU cloud environments
 
+### **Interview Preparation**
+* [k8s Interview](https://github.com/becloudready/k8s-interview-action)
+* [Interview challenge](https://github.com/becloudready/interview-challenges)
 ---
 
 ## **Subscription Plans:**
