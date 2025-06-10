@@ -1,6 +1,6 @@
 
 
-# **AIOps - Tutorial Overview**
+# **AI Platform Engineering - Tutorial Overview**
 
 Welcome to the **Platform Engineering for AI** course! This program is designed to provide you with the essential skills needed to build, deploy, and manage AI applications using modern technologies like **Kubernetes**, **Docker**, **CI/CD pipelines**, and **GPU infrastructure**.
 
