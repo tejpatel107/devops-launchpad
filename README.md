@@ -61,6 +61,19 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
   - [Docker](https://github.com/becloudready/docker-tutorials)
   - [Kubernetes](https://github.com/becloudready/kubernetes-tutorials)
 
+### **Data Engineering & Platforms**
+
+* Introduction to PySpark and Databricks
+* Introduction to SnowflakeDB
+* Basic Data Analytics and Data Science
+* Repositories
+  - [Snowflake](https://github.com/becloudready/snowflake-tutorials)
+  - [Elasticsearch](https://github.com/becloudready/es-tutorials)
+  - [Data Science](https://github.com/becloudready/datascience-tutorials)
+  - [PostgreSQL](https://github.com/becloudready/pgsql-tutorials)
+
+
+
 ### **AI & Large Language Models (LLM)**
 
 * Introduction to GPU architecture and its role in AI, including **Nvidia GPUs** and **Kubernetes Nvidia Operator**
