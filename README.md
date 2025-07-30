@@ -6,7 +6,7 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 
 ### **Course Highlights:**
 
-* Why Platform Engineering [Is DevOps Dead?](https://youtu.be/07gEMmdw62I?si=p9obR7IqkpdMeX0z)
+
 
 ---
 
