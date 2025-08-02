@@ -7,10 +7,11 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 
 ### Pre-Training
 
-* Computer Fundamentals - Google Course [https://www.youtube.com/watch?v=Z_hU2zm4_S8&list=PLTZYG7bZ1u6o6wz9EF9tQt1JS-pUmmKTj]
-* Network Infrastructure - Google Course [https://youtu.be/u08ks4xUheM?si=DKqY8BCoHx4nDoVt]
-* Git & GitHub - Google Course [https://youtu.be/0szcEwY-INI?si=tG9t5CdDlUa04dO2]
-* Python for Automation - Google Course [https://youtu.be/wgYbksLbaqU?si=md7wr-LZ8dKEcCl7]
+* [Computer Fundamentals - Google Course](https://youtu.be/Z_hU2zm4_S8?si=geAUli_1_u2ITGui)
+* [OS Concepts and Practical - Windows and Linux](https://youtu.be/1x4zh2BLuh0?si=wEQkRXT1FW2NaX33)
+* [Network Infrastructure - Google Course](https://youtu.be/u08ks4xUheM?si=DKqY8BCoHx4nDoVt)
+* [Git & GitHub - Google Course](https://youtu.be/0szcEwY-INI?si=tG9t5CdDlUa04dO2)
+* [Python for Automation - Google Course](https://youtu.be/wgYbksLbaqU?si=md7wr-LZ8dKEcCl7)
 
   
 ### **Course Highlights:**
