@@ -7,7 +7,9 @@ Welcome to the **Platform Engineering for AI** course! This program is designed 
 
 ### Pre-Training
 
-* [Computer Fundamentals - Google Course](https://youtu.be/Z_hU2zm4_S8?si=geAUli_1_u2ITGui)
+Use following Google courses and its full Playlist videos
+
+* [Computer Fundamentals - Google Course](https://youtu.be/Z_hU2zm4_S8?si=geAUli_1_u2ITGui) 
 * [OS Concepts and Practical - Windows and Linux](https://youtu.be/1x4zh2BLuh0?si=wEQkRXT1FW2NaX33)
 * [Network Infrastructure - Google Course](https://youtu.be/u08ks4xUheM?si=DKqY8BCoHx4nDoVt)
 * [Git & GitHub - Google Course](https://youtu.be/0szcEwY-INI?si=tG9t5CdDlUa04dO2)
