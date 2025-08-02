@@ -4,8 +4,16 @@
 
 Welcome to the **Platform Engineering for AI** course! This program is designed to provide you with the essential skills needed to build, deploy, and manage AI applications using modern technologies like **Kubernetes**, **Docker**, **CI/CD pipelines**, and **GPU infrastructure**.
 
-### **Course Highlights:**
 
+### Pre-Training
+
+* Computer Fundamentals - Google Course [https://www.youtube.com/watch?v=Z_hU2zm4_S8&list=PLTZYG7bZ1u6o6wz9EF9tQt1JS-pUmmKTj]
+* Network Infrastructure - Google Course [https://youtu.be/u08ks4xUheM?si=DKqY8BCoHx4nDoVt]
+* Git & GitHub - Google Course [https://youtu.be/0szcEwY-INI?si=tG9t5CdDlUa04dO2]
+* Python for Automation - Google Course [https://youtu.be/wgYbksLbaqU?si=md7wr-LZ8dKEcCl7]
+
+  
+### **Course Highlights:**
 
 
 ---
