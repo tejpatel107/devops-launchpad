@@ -49,7 +49,7 @@ Use following Google courses and its full Playlist videos
 * Networking fundamentals including IPv6, VPN, and cloud networking basics
 * Repositories
   - [Shell Scripting](https://github.com/becloudready/bash-tutorials)
-  - [Ansible Tutorial]()
+  - [Ansible Tutorial](https://github.com/becloudready/ansible-tutorials)
 
 ### **Cloud Computing**
 
