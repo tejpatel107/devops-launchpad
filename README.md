@@ -79,6 +79,7 @@ Use following Google courses and its full Playlist videos
 * Basic Data Analytics and Data Science
 * Repositories
   - [Snowflake](https://github.com/becloudready/snowflake-tutorials)
+  - [Databricks](https://github.com/kchandan/azure-databricks-terraform)
   - [Elasticsearch](https://github.com/becloudready/es-tutorials)
   - [Data Science](https://github.com/becloudready/datascience-tutorials)
   - [PostgreSQL](https://github.com/becloudready/pgsql-tutorials)
