@@ -122,5 +122,5 @@ Use following Google courses and its full Playlist videos
 
 ---
 
-Hello Chandan, Tej here!
+Hello, another commit by Tej, from windows' machine. 
 
